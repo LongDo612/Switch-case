@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button style="width: 100px" onclick="cal()">Tinh so ngay</button>
+    <p id="para1"></p>
+
+    <script>
+        let cal = () => {
+            let a,b;
+            a = document.getElementById("input1").value;
+            a = Number.parseInt(a);
+            b = document.getElementById("para1");
+            switch (a) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    b.innerText = "Thang " + a + " co 31 ngay.";
+                    break;
+                case 2:
+                    b.innerText = "Thang " + a + " co 28 hoac 29 ngay.";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    b.innerText = "Thang " + a + " co 30 ngay.";
+                    break;
+                default:
+                    alert("Vui long nhap thang tu 1 - 12");
+            }
+        }
+    </script>
+</body>
+</html>
